@@ -27,6 +27,8 @@ int main(int argc, char* argv[]) {
 	/* Load app config */
 	init_config();
 
+	int tunnel_t_num=1;
+
 	/* Threads for multiple tunnels */
 	void *tunnel_t(void *t_args) {
 		packet_handler(t_args->ethif, t_args->queue);
